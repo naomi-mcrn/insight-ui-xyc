@@ -20,14 +20,14 @@ angular.module('insight.currency').controller('CurrencyController',
 
         if (this.symbol === 'USD') {
           response = _roundFloat((value * this.factor), 2);
-        } else if (this.symbol === 'mBTC') {
-          this.factor = 1000;
+        } else if (this.symbol === 'mXYC') {
+          this.factor = 1000000000;
           response = _roundFloat((value * this.factor), 5);
         } else if (this.symbol === 'bits') {
           this.factor = 1000000;
           response = _roundFloat((value * this.factor), 2);
-        } else { // assumes symbol is BTC
-          this.factor = 1;
+        } else { // assumes symbol is XYC
+          this.factor = 1000000;
           response = _roundFloat((value * this.factor), 8);
         }
         // prevent sci notation
@@ -47,12 +47,12 @@ angular.module('insight.currency').controller('CurrencyController',
         Currency.get({}, function(res) {
           $rootScope.currency.factor = $rootScope.currency.bitstamp = res.data.bitstamp;
         });
-      } else if (currency === 'mBTC') {
-        $rootScope.currency.factor = 1000;
+      } else if (currency === 'mXYC') {
+        $rootScope.currency.factor = 1000000000;
       } else if (currency === 'bits') {
         $rootScope.currency.factor = 1000000;
       } else {
-        $rootScope.currency.factor = 1;
+        $rootScope.currency.factor = 1000000;
       }
     };
 
