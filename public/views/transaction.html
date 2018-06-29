@@ -52,6 +52,10 @@
           <td><strong translate>Size</strong></td>
           <td class="text-muted text-right">{{tx.size}} (bytes)</td>
         </tr>
+        <tr data-ng-show="tx.vsize">
+          <td><strong translate>VSize</strong></td>
+          <td class="text-muted text-right">{{tx.vsize}} (bytes)</td>
+        </tr>
         <tr data-ng-show="tx.fees">
           <td><strong translate>Fee Rate</strong></td>
           <td class="text-muted text-right">{{$root.currency.getConvertion((tx.fees * 1000) / tx.size) + ' per kB' || ((tx.fees * 1000) / tx.size) + 'XYC per kB'}}</td>
