@@ -22,11 +22,6 @@ angular.module('insight.currency').controller('CurrencyController',
 
     $rootScope.currency.getConvertion = function(value) {
       value = value * 1; // Convert to number
-      isminus = false;
-      if(value < 0){
-        isminus = true;
-        value = Math.abs(value);
-      }
 
       if (!isNaN(value) && typeof value !== 'undefined' && value !== null) {
         if (value === 0.00000000) return '0 ' + this.symbol; // fix value to show
@@ -48,11 +43,7 @@ angular.module('insight.currency').controller('CurrencyController',
         // prevent sci notation
         if (response < 1e-7) response=response.toFixed(8);
 
-        if(isminus){
-          return _commaDelimit(response) + ' ' + this.symbol;
-        }else{
-          return '- ' + _commaDelimit(response) + ' ' + this.symbol;
-        }
+        return _commaDelimit(response) + ' ' + this.symbol;
       }
 
       return 'value error';
