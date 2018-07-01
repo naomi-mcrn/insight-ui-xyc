@@ -172,6 +172,22 @@ function($scope, $rootScope, $routeParams, $location, Global, Transaction, Trans
     _findTx(txid);
   });
 
+  //total
+  $scope.total = 0;
+  $scope.totalVal = function(val) {
+    if (val){
+      $scope.total = total + val;
+      console.log(total);
+    }
+  };
+
+  $scope.cbtotal = 0;
+  $scope.cbtotalVal  = function(val) {
+    if (val){
+      $scope.cbtotal = cbtotal + val;
+    }
+  };
+
 });
 
 angular.module('insight.transactions').controller('SendRawTransactionController',
