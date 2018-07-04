@@ -258,6 +258,12 @@ margin-left: 0;
   white-space: nowrap;
 }
 
+
+.sidebyside {
+  display: inline-block;
+   _display: inline;
+}
+
 .line20 {
   border: 1px solid #D4D4D4;
   margin-bottom: 15px;
@@ -391,6 +397,17 @@ margin-left: 0;
   font-weight: normal;
 }
 .progress-bar-info { background-color: #8DC429; }
+
+.txvalues-sidebyside {
+  align="left";
+  width: 30%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  _display: inline;
+}
+
 
 /* Set the fixed height of the footer here */
 #footer {

@@ -1,0 +1,26 @@
+<div data-ng-hide="!tx">
+  <div>
+    <div class="col-xs-7 col-md-8 sidebyside">
+      <div data-ng-show="vin.unconfirmedInput || vin.dbError" class="txvalues-sidebyside"><span class="glyphicon glyphicon-warning-sign"></span><a href="tx/{{tx.txid}}">{{tx.txid}}</a></div>
+      <div data-ng-show="!vin.unconfirmedInput && !vin.dbError" class="txvalues-sidebyside"><a href="tx/{{tx.txid}}">{{tx.txid}}</a></div>
+    </div>
+    <div class="text-right text-muted">
+      <div class="ellipsis" data-ng-show="tx.blocktime && !tx.firstSeenTs"><time>{{tx.time * 1000 | date:'medium'}}</time></div>
+    </div>
+    <div align="right">
+    <div class="sidebyside" data-ng-init="$scope.totalval = 0"/>
+    <div class="txvalues txvalues-generate ng-binding sidebyside" data-ng-if="tx.isCoinBase"><span translate>mined</span></div>
+    <div class="txvalues txvalues-primary ng-binding sidebyside">{{$root.currency.getSignConvertion($scope.totalval)}}</div>
+    <div data-ng-show="tx.confirmations" class="txvalues       txvalues-success ng-binding sidebyside" ><span translate>Confirmations</span>:{{tx.confirmations}}</div>
+    <div data-ng-show="!tx.confirmations" class="txvalues       txvalues-danger ng-binding sidebyside" >Unconfirmed Transaction!</div>
+  </div>
+  <div>
+    <div data-ng-repeat="vin in tx.vinSimple">
+      <div data-ng-if="vin.addr == $root.currentAddr" data-ng-init="$scope.totalval = $scope.totalval + -vin.value"/>
+    </div>
+  </div>
+  <div data-ng-repeat="vout in tx.voutSimple">
+    <div data-ng-if="vout.addr == $root.currentAddr" data-ng-init="$scope.totalval = $scope.totalval + vout.value"/>
+  </div>
+  <div data-ng-if"!$scope.totalval == 0" data-ng-init="$scope.totalval = 0"/>
+</div>
