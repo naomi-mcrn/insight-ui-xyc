@@ -3,6 +3,7 @@
     <div class="col-xs-7 col-md-8 sidebyside">
       <div data-ng-show="vin.unconfirmedInput || vin.dbError" class="txvalues-sidebyside"><span class="glyphicon glyphicon-warning-sign"></span><a href="tx/{{tx.txid}}">{{tx.txid}}</a></div>
       <div data-ng-show="!vin.unconfirmedInput && !vin.dbError" class="txvalues-sidebyside"><a href="tx/{{tx.txid}}">{{tx.txid}}</a></div>
+      <span class="btn-copy" data-clipboard-text="{{tx.txid}}" onclick=""></span>
     </div>
     <div class="text-right text-muted">
       <div class="ellipsis" data-ng-show="tx.blocktime && !tx.firstSeenTs"><time>{{tx.time * 1000 | date:'medium'}}</time></div>
