@@ -472,3 +472,11 @@ msgstr "vom:"
 
 msgid "Waiting for blocks"
 msgstr "Warte auf Blöcke"
+
+#: public/views/transaction/addr_list.html
+msgid "Details"
+msgstr "Einzelheiten"
+
+#: public/views/transaction/addr_list.html
+msgid "Historys"
+msgstr "Historien"

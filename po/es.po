@@ -468,3 +468,11 @@ msgstr "minado el:"
 
 #~ msgid "Waiting for blocks"
 #~ msgstr "Esperando bloques"
+
+#: public/views/transaction/addr_list.html
+msgid "Details"
+msgstr "Detalles"
+
+#: public/views/transaction/addr_list.html
+msgid "Historys"
+msgstr "Historys"

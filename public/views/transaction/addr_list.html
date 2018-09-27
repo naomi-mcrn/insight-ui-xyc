@@ -2,8 +2,8 @@
   data-ng-show="!txs[0].txid && !loading"
   translate>There are no transactions involving this address.</div>
   <div data-ng-init="tab = 1" class="tab">
-    <span data-ng-click="tab = 1" class="transaction_tabs_selected" data-ng-class="{'transaction_tabs_selected': tab === 1 , 'transaction_tabs': tab === 2 }"><label class="tabLabel"> Historys </label></span>
-    <span data-ng-click="tab = 2" class="transaction_tabs" data-ng-class="{'transaction_tabs_selected': tab === 2 , 'transaction_tabs': tab === 1 }"><label class="tabLabel"> Details </label></span>
+    <span data-ng-click="tab = 1" class="transaction_tabs_selected" data-ng-class="{'transaction_tabs_selected': tab === 1 , 'transaction_tabs': tab === 2 }"><label class="tabLabel"> <span translate>Historys</span> </label></span>
+    <span data-ng-click="tab = 2" class="transaction_tabs" data-ng-class="{'transaction_tabs_selected': tab === 2 , 'transaction_tabs': tab === 1 }"><label class="tabLabel"> <span translate>Details</span> </label></span>
   
     <span class="tx-contents" >
     <div class="block-tx" data-ng-show="txs && txs[0].txid" data-ng-repeat="tx in txs | orderBy: '-time'">

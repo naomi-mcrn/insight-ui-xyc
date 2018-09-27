@@ -21,19 +21,18 @@ msgstr "404 ページがみつかりません (´・ω・`)"
 
 #: public/views/index.html
 msgid ""
-"<strong>insight</strong>  is an <a href=\"http://live.insight.is/\" target="
-"\"_blank\">open-source Bitcoin blockchain explorer</a> with complete REST "
-"and websocket APIs that can be used for writing web wallets and other apps  "
-"that need more advanced blockchain queries than provided by bitcoind RPC.  "
-"Check out the <a href=\"https://github.com/bitpay/insight-ui\" target=\"_blank"
-"\">source code</a>."
+"<strong>insight</strong>  is an <a href=\"http://live.insight.is/\" "
+"target=\"_blank\">open-source Yama_coin blockchain explorer</a> with complete "
+"REST and websocket APIs that can be used for writing web wallets and other "
+"apps  that need more advanced blockchain queries than provided by Yamacoind "
+"RPC.  Check out the <a href=\"https://github.com/ett126/insight-ui-xyc\" "
+"target=\"_blank\">source code</a>."
 msgstr ""
-"<strong>insight</strong>は、bitcoind RPCの提供するものよりも詳細なブロック"
-"チェインへの問い合わせを必要とするウェブウォレットやその他のアプリを書くのに"
-"使える、完全なRESTおよびwebsocket APIを備えた<a href=\"http://live.insight."
-"is/\" target=\"_blank\">オープンソースのビットコインブロックエクスプローラ</"
-"a>です。<a href=\"https://github.com/bitpay/insight-ui\" target=\"_blank\">ソース"
-"コード</a>を確認"
+"<strong>insight</strong>は、Yamacoin "
+"RPCの提供するものよりも詳細なブロックチェインへの問い合わせを必要とするウェブウォレットやその他のアプリを書くのに使える、完全なRESTおよびwebsocket"
+" APIを備えた<a href=\"http://live.insight.is/\" target=\"_blank\">"
+"オープンソースのブロックチェインエクスプローラ</a>です。<a href=\"https://github.com/bitpay/insight-"
+"ui\" target=\"_blank\">ソースコード</a>を確認"
 
 #: public/views/index.html
 msgid ""
@@ -41,9 +40,9 @@ msgid ""
 "bugs and provide feedback for improvement at our <a href=\"https://github."
 "com/bitpay/insight/issues\" target=\"_blank\">github issue tracker</a>."
 msgstr ""
-"<strong>insight</strong>は現在開発中です。<a href=\"https://github.com/"
-"bitpay/insight/issues\" target=\"_blank\">githubのissueトラッカ</a>にてバグの"
-"報告や改善案の提案をお願いします。"
+"<strong>insight</strong>は現在開発中です。<a href=\"https://github."
+"com/bitpay/insight/issues\" target=\"_blank\">githubのissueトラッカ</a>"
+"にてバグの報告や改善案の提案をお願いします。"
 
 #: public/views/index.html
 msgid "About"
@@ -535,11 +534,23 @@ msgstr "最初に発見された日時"
 
 #: public/views/transaction/tx.html
 msgid "mined"
-msgstr "採掘された"
+msgstr "採掘"
 
 #: public/views/block_list.html
 msgid "mined on:"
 msgstr "採掘日時:"
+
+#: public/views/transaction/addr_list.html
+msgid "Details"
+msgstr "詳細"
+
+#: public/views/transaction/addr_list.html
+msgid "Historys"
+msgstr "履歴"
+
+#: public/views/transaction.html
+msgid "VSize"
+msgstr "仮想サイズ(VSize)"
 
 #~ msgid "(Mainchain)"
 #~ msgstr "(メインチェーン)"
