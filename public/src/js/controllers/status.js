@@ -17,6 +17,17 @@ angular.module('insight.status').controller('StatusController',
         });
     };
 
+    $scope.getChainStatus = function() {
+      Status.get({q:'getBlockChainInfo'},
+        function(d) {
+          $scope.loaded = 1;
+          angular.extend($scope, d);
+        },
+        function(e) {
+          $scope.error = 'API ERROR: ' + e.data;
+        });
+    };
+
     $scope.humanSince = function(time) {
       var m = moment.unix(time / 1000);
       return m.max().fromNow();

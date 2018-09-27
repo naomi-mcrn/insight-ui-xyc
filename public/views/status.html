@@ -77,7 +77,7 @@
 
     <div class="col-xs-12 col-md-4 col-gray">
       <h2 translate>yama_coin node information</h2>
-      <table class="table" data-ng-controller="StatusController" data-ng-init="getStatus('Info')">
+      <table class="table" data-ng-controller="StatusController" data-ng-init="getStatus('Info');getChainStatus();">
         <thead  data-ng-include src="'views/includes/infoStatus.html'"></thead>
         <tbody>
           <tr>
@@ -90,7 +90,7 @@
           </tr>
           <tr>
             <td translate>Blocks</td>
-            <td class="text-right"><a href="block-index/{{info.blocks}}">{{info.blocks}}</a></td>
+            <td class="text-right"><a href="block-index/{{chain.blocks}}">{{chain.blocks}}</a></td>
           </tr>
           <tr>
             <td translate>Time Offset</td>
@@ -102,11 +102,11 @@
           </tr>
           <tr>
            <td translate>Mining Difficulty</td>
-            <td class="text-right">{{info.difficulty}}</td>
+            <td class="text-right">{{chain.difficulty}}</td>
           </tr>
           <tr>
             <td translate>Network</td>
-            <td class="text-right">{{info.network}}</td>
+            <td class="text-right">{{chain.chain}}</td>
           </tr>
           <tr>
             <td translate>Proxy setting</td>
